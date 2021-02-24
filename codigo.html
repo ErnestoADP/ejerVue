@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="main">
+        <h1>{{texto}}</h1>
+        <input type="text" v-model="texto">
+
+    </div>
+
+    <div id="main2">
+        <h1 v-if="conectado"> estas conectado </h1>
+        <p v-if="edad >=18">puedes entrar</p>
+        <p v-else>no puedes entrar</p>
+        <hr>
+        <h2>
+            Renderizado de listas
+        </h2>
+        <p>{{Listado}}</p>
+
+        <ul>
+            <li v-for="item in listado">
+                {{item}}
+            </li>
+        </ul>
+        <hr>
+
+        <ul>
+            <li v-for="items in listado2">
+                {{items.nombre}} - {{items.edad}}
+            </li>
+        </ul>
+
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="codigo.js"></script>
+</body>
+
+</html>

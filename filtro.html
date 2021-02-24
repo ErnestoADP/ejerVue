@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="main">
+        <h2>Listado de comics</h2>
+        <hr>
+        <input type="text" placeholder="Nombre de Comic" v-model="comic">
+        <button v-on:click="agregarTareas">Buscar comic</button>
+
+        <hr>
+        <ul>
+            <li v-for=" item in nombreComic">
+                {{item.titulo}}
+
+            </li>
+        </ul>
+        <hr>
+        <h2>Titulo de comics</h2>
+        <ul>
+            <li v-for="item in filtrarNombre">
+                {{item.titulo}}
+
+            </li>
+        </ul>
+
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="filtro.js"></script>
+
+</body>
+
+</html>
