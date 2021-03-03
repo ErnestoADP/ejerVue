@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="video11.css">
+</head>
+
+<body>
+
+
+    <div id="main">
+        <h2>Mostrar</h2>
+        <button @click="btnMostrar">aparecer/ocultar</button>
+        <transition name="aparecer">
+            <ul v-if="mostrar">
+                <li v-bind:class="{completado: tarea.completado}" @click="completarTarea(tarea)" v-for="tarea in tareas">
+                    {{tarea.titulo}}
+                </li>
+            </ul>
+        </transition>
+
+        <hr>
+        <pre>
+        {{tareas}}
+
+        </pre>
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="video11.js"></script>
+
+
+</body>
+
+</html>
